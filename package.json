@@ -1,0 +1,19 @@
+{
+  "name": "sitenormelnode",
+  "version": "1.0.0",
+  "description": "Site normel.online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvvitali/site_normel_node.git"
+  },
+  "author": "Vitali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pvvitali/site_normel_node/issues"
+  },
+  "homepage": "https://github.com/pvvitali/site_normel_node#readme"
+}
