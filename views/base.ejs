@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><i class="material-icons  red-text text-darken-1">polymer</i>NORM<span class="red-text text-darken-1">EL</span></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Онлайн мониторинг</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Мониторинг параметров электросети и режима работы станции normel</h5>
+        </div>
+        <div class="row center">
+          <a href="/monitoring" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Login</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="/static/img/lamp.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">info_outline</i></h2>
+            <h5 class="center">О технологии</h5>
+
+            <p class="light">Нормализатор переменного напряженя NORMEL с функцией энергосбережения промышленной серии ESSV предназначен
+              для автоматического регулирования величины напряжения в электрических сетях 380/400 В, 50/60 Гц,
+              сокращения потребления электроэнегрии от 5 до 25%,
+              улучшения  качества  электроэнергии в соответствии с требованиями ГОСТ 32144-2013</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Эффект от использования нормализатора</h5>
+
+            <p class="light">Препятствует проникновению в нагрузку из сети импульсных и высокочастотных помех.<br>
+              Легкая адаптивность к действующим электрическим сетям.<br>
+              КПД 99,7%.<br>
+              Масса и габариты в несколько раз меньше всех известных аналогов.<br>
+              Стоимость нормализатора ниже всех известных косвенных аналогов.<br>
+              Сокращение потребления электроэнергии (при условии повышенного напряжения) до 25%.<br>
+              Увеличение срока службы подключенного к нормализатору электрооборудования в 2–4 раза.<br>
+              Совокупная экономия материальных и финансовых ресурсов в среднем 60%.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">attach_money</i></h2>
+            <h5 class="center">Цели</h5>
+
+            <p class="light">Экономия денежных средств за счет сокращения электропотребления;<br>
+              Экономия денежных средств за счет увеличения ресурса электроприемников.<br>
+              Применяемое в устройстве запатентованное схемное решение позволяет использовать компоненты силовой части имеющие номинальную мощность, не превышающую 10% от мощности стабилизируемой нагрузки. В результате этого, КПД устройства составляет 99,7%.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Экономия электроэнергии сокращает выбросы CO2  и спасает от вырубки деревья</h5>
+          <h5 class="header col s12 center light-text">Сэкономлено кВт·ч: <span id="counter_kwt" class="blue-grey"></span></h5>
+            <script>
+              const counterText = document.getElementById('counter_kwt');
+              let counterKwt = 152345;
+              counterText.innerHTML = counterKwt;
+              setInterval( () => {
+                counterKwt++;
+                counterText.innerHTML = counterKwt;
+              }, 200);
+            </script>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/static/img/env.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Метод расчета эффективности применения
+            трехфазного энергосберегающего нормализатора переменного напряжения NORMEL типа ESSV-I</h4>
+          <p class="left-align light">         
+            Расчетное значение величины изменения фазных напряжений: <br>
+            Uуст = U1 / Кт,<br>
+            
+            где U1 – среднее фазное напряжение на входе нормализатора, согласно данным опросного листа или его среднее значение за период измерения при помощи регистратора, В; Кт – коэффициент трансформации фазных электромагнитных преобразователей нормализатора, согласно техническим условиям на производство трансформаторов для нормализаторов NORMEL, Кт = 17,7 крат (Кт = const).
+            <br>
+            Далее рассчитываются уровни потребляемой электрической мощности.
+            <br>
+            Расчет потребляемой электрической мощности до включения нормализатора:
+            <br>
+            Р1 = (I1ср · U1 · Cos φ)/1000, [кВт];
+            <br>
+            Р1 = ____ · ____· ___ = ___кВт.
+            <br>
+            где I1ср – среднее значение фазного тока, согласно данным опросного листа или его среднее значение за период измерения при помощи регистратора, А; Cos φ – коэффициент мощности, согласно данным опросного листа или его среднее значение за период измерения при помощи регистратора.
+            <br>
+            I1ср = (IAср + IBср + ICср) / 3, [А];
+            <br>
+            I1ср = (____+_____+____) / 3 = ___ А
+            <br>           
+            Потребляемая электрическая мощность после включения нормализатора:
+            <br>
+            Р2 = (I2ср · U2 · Cos φ)/1000, [кВт];
+            <br>
+            Р2 = (___ · ___) · (___ – (___/17,7)) · 0,9 = ___ кВт,
+            <br>
+            где I2ср = I1ср · 0,9 (здесь 0,9– обратный коэффициент автотрансформации, согласно техническим условиям на производство нормализаторов), А; U2 – фазное напряжение, приложенное к нагрузке после включения нормализатора, В, равное U2 = U1 – Uуст.
+            <br>
+            Мгновенное значение величины сокращения фазного потребления электрической мощности в результате применения нормализатора:
+            <br>
+            ΔРф = Р1 – Р2. [кВт],
+            <br>
+            ΔРф = ___ – ___= ___ кВт.
+            <br>
+            Полное значение сокращения потребления электрической мощности по трем фазам:
+            <br>
+            ΔРполн = ΔРф · 3. [кВт],
+            <br>
+            ΔРполн = ___ · 3 = ___ кВт.
+            <br>
+            Экономия потребления электрической мощности за год:
+            <br>
+            Эгод = 365 · 24 · ΔРполн, [кВт·ч]
+            <br>
+            Эгод = ___ · __· ___= ____ кВт·ч
+            <br>
+            где 365 – количество дней в году, дн; 24 – количество часов работы в сутках, ч.
+            <br>
+            Экономический эффект в мдл от применения нормализатора за год:
+            <br>
+            Ээ.год = Эгод · Т, [мдл]
+            <br>
+            Ээ.год = ___ · ___= ____ мдл.
+            <br>
+            где Т – тариф за количество потребленной электрической энергии, согласно опросного листа, мдл/кВт·ч, с НДС.
+            <br>           
+            Срок окупаемости нормализатора:
+            <br>
+            С = Ц / Ээ.год, [лет]
+            <br>
+            С =_____/____=___ года
+            <br>
+            где Ц – стоимость нормализатора, согласно прайс-листа, руб.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Сохраняя электроэнергию мы сохраняям планету!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/static/img/trees2.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Контактная информация</h5>
+          <p class="grey-text text-lighten-4">
+            "NORMEL-M" SRL<br>
+            Ул. Дечебал, 72/1, г.Кишинев, Молдова<br>
+            Моб. +373 600 055 50   +373 695 477 74
+            Info@normel-m.com
+          </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="#">Vitali</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/static/js/materialize.min.js"></script>
+  <script src="/static/js/init.js"></script>
+
+  </body>
+</html>
