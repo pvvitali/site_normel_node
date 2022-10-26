@@ -92,7 +92,7 @@
             <div class="switch">
               <label>
                 Off
-                <input type="checkbox" id="online">
+                <input type="checkbox" id="online" checked="checked">
                 <span class="lever"></span>
                 On
               </label>
@@ -231,12 +231,12 @@
               <!-- <div class="col s12 m1"></div> -->
               <div class="col s12 m2">
                 <br>
-                <input type="text" class="datepicker">
+                <input id="firstDate" type="text" class="datepicker">
               </div>
               <div class="col s12 m1"></div>
               <div class="col s12 m2">
                 <br>
-                <input type="text" class="datepicker">
+                <input id="secondDate" type="text" class="datepicker">
               </div>
               <div class="col s12 m1">
               </div>
@@ -249,7 +249,7 @@
               </div>
               <div class="col s12 m2">
                 <br>
-                <a class="waves-effect waves-light btn">Расчитать</a>
+                <a class="waves-effect waves-light btn" id="calculated">Расчитать</a>
               </div>
             </div>
           </div>
@@ -279,8 +279,12 @@
                     <td id="energy"></td>
                   </tr>
                   <tr>
-                    <td>Тариф за электроэнергию, лей (1кВт)</td>
+                    <td>Тариф за электроэнергию, лей (1кВт*ч)</td>
                     <td id="rate"></td>
+                  </tr>
+                  <tr>
+                    <td>Временной диапазон, часов</td>
+                    <td id="timeInterval"></td>
                   </tr>
                   <tr>
                     <td>Экономический эффект, лей</td>
@@ -296,6 +300,10 @@
             <div class="col s1"></div>
           </div>
         </div>
+
+        <br>
+        <br>
+        <br>
     
      
     

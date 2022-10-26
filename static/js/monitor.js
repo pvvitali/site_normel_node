@@ -1,3 +1,29 @@
+//init.js
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     let elems = document.querySelectorAll('.parallax');
+//     let instances = M.Parallax.init(elems, {});
+  
+//     let navElems = document.querySelectorAll('.sidenav');
+//     let navInstances = M.Sidenav.init(navElems);
+  
+//     let elems_tooltip = document.querySelectorAll('.tooltipped');
+//     let tooltipInstances = M.Tooltip.init(elems_tooltip);
+  
+//     let elems_datepicker = document.querySelectorAll('.datepicker');
+//     let instancesDatepicker = M.Datepicker.init(elems_datepicker, {
+//       format: 'dd.mm.yyyy',
+//       defaultDate: new Date(),
+//       setDefaultDate: true,
+//       firstDay: 1
+//     });
+  
+//     let tabsElems = document.querySelectorAll('.tabs');
+//     let tabsinstance = M.Tabs.init(tabsElems, {});
+//   });
+
+
+
 //
 // Table 1
 //
@@ -92,6 +118,9 @@ const displayData = () => {
 
     //
     subPower = w_amount_in - w_amount;
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! change
+    subPower = Math.abs(subPower);
     subPower_text.innerText = subPower.toFixed(2) + ' Вт';
 };
 
@@ -139,4 +168,58 @@ onlineCheckbox.addEventListener('change', () =>{
     }else{
         clearInterval(timerId);
     }
+});
+
+//switch on
+let event_ch = new Event('change');
+online.dispatchEvent(event_ch);
+
+
+//Button расчитать
+const calcText = document.getElementById('calculated');
+const rateInputText = document.getElementById('rateInput');
+const rate = document.getElementById('rate');
+//
+const timeInterval = document.getElementById('timeInterval');
+const energyText = document.getElementById('energy');
+const effectText = document.getElementById('effect');
+const amountCo2Text = document.getElementById('amountCo2');
+//
+let rateInput = '';
+//
+let firstDay = null;
+let secondDay = null;
+let subDate = 0;
+let hours = 0;
+//
+let energy = 0;
+let effect = 0;
+
+
+calcText.addEventListener('click', () => {
+    rateInput = rateInputText.value;
+    if(!rateInput){
+        rateInput = rateInputText.placeholder;
+    }
+    rate.textContent = rateInput + ' лей';
+    //
+    firstDay = instancesDatepicker[0].date;
+    secondDay = instancesDatepicker[1].date;
+    subDate = secondDay.getTime() - firstDay.getTime() + 86400000;
+    hours = subDate/3600000;
+    timeInterval.textContent = hours + ' ч';
+    //
+    //energy, subPower
+    energy = subPower/1000 * hours;     //kW
+    energy = energy.toFixed(2);
+    energyText.innerText = energy + ' кВтч';
+    //
+    //effect
+    effect = energy * parseFloat(rateInput);
+    effectText.innerText = effect.toFixed(2) + ' лей';
+    //
+    //CO2
+    amountCo2Text.innerText = (energy * 0.502 / 1000).toFixed(2) + ' т';
+
+
 });

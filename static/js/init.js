@@ -1,3 +1,5 @@
+let instancesDatepicker = null;
+
 document.addEventListener('DOMContentLoaded', () => {
   let elems = document.querySelectorAll('.parallax');
   let instances = M.Parallax.init(elems, {});
@@ -9,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let tooltipInstances = M.Tooltip.init(elems_tooltip);
 
   let elems_datepicker = document.querySelectorAll('.datepicker');
-  let instancesDatepicker = M.Datepicker.init(elems_datepicker, {
+  instancesDatepicker = M.Datepicker.init(elems_datepicker, {
     format: 'dd.mm.yyyy',
-    defaultDate: new Date(Date.now()),
+    defaultDate: new Date(),
     setDefaultDate: true,
     firstDay: 1
   });
