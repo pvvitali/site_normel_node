@@ -38,7 +38,7 @@
           <h5 class="header col s12 light">Мониторинг параметров электросети и режима работы станции normel</h5>
         </div>
         <div class="row center">
-          <a href="/monitoring" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Login</a>
+          <a href="/monitoring" id="download-button" class=" btn-floating btn-large waves-effect waves-light teal lighten-1 pulse"> Login </a>
         </div>
         <br><br>
 
@@ -101,15 +101,21 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Экономия электроэнергии сокращает выбросы CO2  и спасает от вырубки деревья</h5>
-          <h5 class="header col s12 center light-text">Сэкономлено кВт·ч: <span id="counter_kwt" class="blue-grey"></span></h5>
+          <h5 class="header col s12 light-text">Экономия электроэнергии сокращает выбросы CO2  и спасает от вырубки деревья</h5>
+          <h5 class="header col s12 light-text">За всё время работы станций NORMEL-M:</h5>
+          <h5 class="header col s12 center light-text">количество cэкономленой энергии (килловатт часов): <span id="counter_kwt" class="blue-grey lighten-1"></span> кВт·ч</h5>
+          <h5 class="header col s12 center light-text">сокращено выбросов CO2: <span id="counter_co2" class="blue-grey lighten-1"></span> т.</h5>
             <script>
               const counterText = document.getElementById('counter_kwt');
+              const co2Text = document.getElementById('counter_co2');
               let counterKwt = 152345;
+              let counter_co2 = counterKwt/0.502;
               counterText.innerHTML = counterKwt;
               setInterval( () => {
                 counterKwt++;
+                counter_co2 = counterKwt/0.502;
                 counterText.innerHTML = counterKwt;
+                co2Text.innerHTML = counter_co2.toFixed(2);
               }, 200);
             </script>
         </div>
@@ -126,7 +132,7 @@
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Метод расчета эффективности применения
             трехфазного энергосберегающего нормализатора переменного напряжения NORMEL типа ESSV-I</h4>
-          <p class="left-align light">         
+          <p class="left-align light flow-text">         
             Расчетное значение величины изменения фазных напряжений: <br>
             Uуст = U1 / Кт,<br>
             
@@ -188,7 +194,7 @@
             <br>
             С =_____/____=___ года
             <br>
-            где Ц – стоимость нормализатора, согласно прайс-листа, руб.</p>
+            где Ц – стоимость нормализатора, согласно прайс-листа, мдл.</p>
         </div>
       </div>
 
@@ -243,14 +249,14 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="#">Vitali</a>
+      2022  <a class="brown-text text-lighten-3" href="#"></a>
       </div>
     </div>
   </footer>
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
   <script src="/static/js/materialize.min.js"></script>
   <script src="/static/js/init.js"></script>
 

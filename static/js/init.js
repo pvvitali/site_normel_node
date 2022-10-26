@@ -1,8 +1,21 @@
-(function($){
-  $(function(){
+document.addEventListener('DOMContentLoaded', () => {
+  let elems = document.querySelectorAll('.parallax');
+  let instances = M.Parallax.init(elems, {});
 
-    $('.sidenav').sidenav();
-    $('.parallax').parallax();
+  let navElems = document.querySelectorAll('.sidenav');
+  let navInstances = M.Sidenav.init(navElems);
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+  let elems_tooltip = document.querySelectorAll('.tooltipped');
+  let tooltipInstances = M.Tooltip.init(elems_tooltip);
+
+  let elems_datepicker = document.querySelectorAll('.datepicker');
+  let instancesDatepicker = M.Datepicker.init(elems_datepicker, {
+    format: 'dd.mm.yyyy',
+    defaultDate: new Date(Date.now()),
+    setDefaultDate: true,
+    firstDay: 1
+  });
+
+  let tabsElems = document.querySelectorAll('.tabs');
+  let tabsinstance = M.Tabs.init(tabsElems, {});
+});

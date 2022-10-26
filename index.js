@@ -30,7 +30,9 @@ app.get('/', (request, response) => {
 });
 
 app.get('/monitoring', (req, res) => {
-    res.status(200).json("Page monitoring");
+    res.render('monitor', {});
+
+    //res.status(200).json("Page monitoring");
 });
 
 app.post('/', (req, res) => {
